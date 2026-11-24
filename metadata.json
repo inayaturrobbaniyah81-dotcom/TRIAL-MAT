@@ -1,0 +1,8 @@
+{
+  "name": "Remix Tes Sumatif ",
+  "description": "Tes Sumatif Akhir Semester 1 Matematika Kelas VI SD Negeri 3 Dangintukadaya",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
