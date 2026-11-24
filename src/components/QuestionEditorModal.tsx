@@ -139,6 +139,23 @@ export const QuestionEditorModal: React.FC<QuestionEditorModalProps> = ({
             </div>
           </div>
 
+          {question.imageUrl && (
+            <div className="p-2.5 rounded-xl border border-slate-200 bg-slate-50 space-y-1.5">
+              <span className="block text-[11px] font-bold text-slate-600">
+                Gambar Ilustrasi Terlampir:
+              </span>
+              <img
+                src={question.imageUrl}
+                alt={question.imageAlt || `Ilustrasi Soal ${question.id}`}
+                referrerPolicy="no-referrer"
+                className="max-h-44 w-auto mx-auto object-contain rounded-lg bg-white border border-slate-200"
+              />
+              {question.imageCaption && (
+                <p className="text-[11px] text-slate-500 text-center">{question.imageCaption}</p>
+              )}
+            </div>
+          )}
+
           {/* Teks Pertanyaan Soal */}
           <div>
             <label className="block text-xs font-bold text-slate-700 mb-1">

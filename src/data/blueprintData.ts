@@ -2,7 +2,7 @@ import { Question, QuestionBlueprint, CognitiveLevel, Difficulty } from '../type
 
 /**
  * Data Acuan Matriks Kisi-Kisi Penulisan Soal Tes Sumatif
- * Kurikulum Merdeka - Fase C (Kelas VI) Mata Pelajaran Matematika
+ * Kurikulum Merdeka - Fase C (Kelas VI Semester 1) Mata Pelajaran Bahasa Indonesia
  */
 
 export interface BlueprintDefinition {
@@ -13,276 +13,246 @@ export interface BlueprintDefinition {
   bobotSkor: number;
 }
 
-// Peta acuan default 30 butir soal Kurikulum Merdeka
+// Peta acuan default 30 butir soal Kurikulum Merdeka Bahasa Indonesia Kelas VI Semester 1
 export const DEFAULT_BLUEPRINT_MAP: Record<number, BlueprintDefinition> = {
   1: {
-    elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah operasi hitung bilangan bulat negatif dan positif dalam kehidupan sehari-hari.',
+    elemen: 'Teks Deskripsi',
+    tujuanPembelajaran: 'Menentukan gagasan pokok dan gagasan pendukung.',
     indikatorSoal:
-      'Disajikan narasi perubahan suhu es yang dipanaskan secara berkala, peserta didik dapat menentukan suhu akhir es setelah waktu pemanasan tertentu.',
+      'Disajikan sebuah paragraf teks deskripsi tentang kawasan konservasi alam, peserta didik dapat menentukan gagasan pokok paragraf tersebut dengan tepat.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
   2: {
-    elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah penalaran yang melibatkan operasi hitung campuran pecahan dan bilangan cacah.',
+    elemen: 'Teks Deskripsi',
+    tujuanPembelajaran: 'Mengidentifikasi informasi penting dalam berbagai jenis teks.',
     indikatorSoal:
-      'Disajikan cerita kontekstual panen beras (kuintal) yang dijual dan dibagi rata ke beberapa tetangga, peserta didik dapat menghitung berat beras yang diterima tiap orang dalam satuan kilogram.',
+      'Disajikan gambar ilustrasi satwa komodo dan paragraf deskripsi ciri fisiknya, peserta didik dapat mengidentifikasi informasi tersurat yang sesuai dengan gambar dan teks.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   3: {
-    elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat mengaplikasikan konsep Faktor Persekutuan Terbesar (FPB) untuk menyelesaikan permasalahan pembagian barang secara merata.',
+    elemen: 'Teks Deskripsi',
+    tujuanPembelajaran: 'Menafsirkan informasi tersurat dan tersirat.',
     indikatorSoal:
-      'Disajikan data tiga jenis perlengkapan belajar yang akan dibagikan sama banyak kepada siswa berprestasi, peserta didik dapat menentukan jumlah siswa terbanyak penerima dan jumlah pensil yang didapat masing-masing siswa.',
+      'Disajikan penggalan teks deskripsi suasana pasar tradisional pada pagi hari, peserta didik dapat menafsirkan informasi tersirat dari bacaan tersebut.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   4: {
-    elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat menerapkan konsep Kelipatan Persekutuan Terkecil (KPK) dalam menentukan jadwal atau waktu kejadian bersamaan.',
+    elemen: 'Teks Narasi dan Cerita',
+    tujuanPembelajaran: 'Menganalisis unsur dan pesan dalam teks narasi.',
     indikatorSoal:
-      'Disajikan interval waktu berbunyinya tiga lonceng pos kamling pada pukul tertentu, peserta didik dapat menentukan waktu saat ketiga lonceng berbunyi bersamaan kembali untuk kedua kalinya.',
+      'Disajikan kutipan cerita pendek tentang kejujuran seorang anak, peserta didik dapat menentukan watak tokoh dan latar waktu cerita secara tepat.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
   5: {
-    elemen: 'Aljabar',
-    tujuanPembelajaran:
-      'Peserta didik dapat memahami konsep rasio, perbandingan, dan skala pada peta atau denah.',
+    elemen: 'Teks Narasi dan Cerita',
+    tujuanPembelajaran: 'Menganalisis unsur dan pesan dalam teks narasi.',
     indikatorSoal:
-      'Disajikan jarak dua kota pada peta dan skala tertentu, peserta didik dapat menghitung jarak sebenarnya antara kedua kota tersebut dalam satuan kilometer.',
-    levelKognitif: 'L1',
-    bobotSkor: 1,
-  },
-  6: {
-    elemen: 'Aljabar',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah proporsi dan perbandingan senilai yang berkaitan dengan selisih dan jumlah nilai.',
-    indikatorSoal:
-      'Disajikan perbandingan umur dua orang dan selisih umur mereka, peserta didik dapat menghitung jumlah umur kedua orang tersebut seluruhnya.',
+      'Disajikan kutipan cerita tentang kekeringan dan pembuatan sumur resapan, peserta didik dapat menganalisis hubungan sebab-akibat munculnya konflik dalam cerita.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
-  7: {
-    elemen: 'Aljabar',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis permasalahan gerak lurus beraturan (kecepatan rata-rata, jarak, dan waktu) untuk kasus berpapasan.',
+  6: {
+    elemen: 'Teks Narasi dan Cerita',
+    tujuanPembelajaran: 'Menganalisis unsur dan pesan dalam teks narasi.',
     indikatorSoal:
-      'Disajikan jarak dua kota, waktu keberangkatan yang sama, dan kecepatan dua kendaraan yang berpapasan, peserta didik dapat menganalisis dan menentukan pukul berapa kedua kendaraan saling berpapasan.',
-    levelKognitif: 'L3',
+      'Disajikan penggalan cerita tentang kebiasaan menabung seorang siswa, peserta didik dapat menentukan amanat yang terkandung dalam cerita.',
+    levelKognitif: 'L1',
+    bobotSkor: 1,
+  },
+  7: {
+    elemen: 'Teks Prosedur',
+    tujuanPembelajaran: 'Memahami struktur dan urutan teks prosedur.',
+    indikatorSoal:
+      'Disajikan teks prosedur pembuatan jus jambu biji, peserta didik dapat mengidentifikasi ciri kebahasaan kata kerja perintah (imperatif) yang digunakan.',
+    levelKognitif: 'L1',
     bobotSkor: 1,
   },
   8: {
-    elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah yang melibatkan hubungan antara volume bangun ruang, debit aliran zat cair, dan waktu pengisian.',
+    elemen: 'Teks Prosedur',
+    tujuanPembelajaran: 'Memahami struktur dan urutan teks prosedur.',
     indikatorSoal:
-      'Disajikan ukuran bak penampungan air berbentuk balok dan debit kran air pengisi, peserta didik dapat menghitung waktu yang dibutuhkan untuk mengisi bak hingga penuh.',
+      'Disajikan gambar diagram 4 tahapan mencangkok tanaman dan teks langkah rumpang, peserta didik dapat menentukan kalimat perintah untuk melengkapi urutan langkah ke-2.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   9: {
-    elemen: 'Geometri',
-    tujuanPembelajaran:
-      'Peserta didik dapat menghitung keliling lingkaran dan mengaplikasikannya dalam pemecahan masalah lingkungan sekitar.',
+    elemen: 'Teks Eksplanasi dan Informasi',
+    tujuanPembelajaran: 'Membedakan fakta dan opini.',
     indikatorSoal:
-      'Disajikan diameter sebuah taman berbentuk lingkaran yang akan dipasangi lampu penerangan dengan jarak tertentu, peserta didik dapat menentukan jumlah lampu yang dibutuhkan.',
-    levelKognitif: 'L1',
+      'Disajikan paragraf informasi mengenai manfaat hutan mangrove, peserta didik dapat mengidentifikasi kalimat yang merupakan opini secara tepat.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   10: {
-    elemen: 'Geometri',
-    tujuanPembelajaran:
-      'Peserta didik dapat menghitung luas gabungan bangun datar (persegi panjang dan lingkaran).',
+    elemen: 'Teks Eksplanasi dan Informasi',
+    tujuanPembelajaran: 'Mengidentifikasi informasi penting dalam berbagai jenis teks.',
     indikatorSoal:
-      'Disajikan gambar bangun datar gabungan antara persegi panjang dan setengah lingkaran berimpit, peserta didik dapat menghitung luas gabungan bangun tersebut.',
+      'Disajikan teks eksplanasi tentang fenomena tanah longsor, peserta didik dapat menentukan hubungan sebab-akibat yang sesuai dengan isi teks.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   11: {
-    elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis dan menghitung volume bangun ruang tabung serta konversi volume ke satuan liter.',
+    elemen: 'Teks Eksplanasi dan Informasi',
+    tujuanPembelajaran: 'Menyimpulkan, membandingkan, dan mengevaluasi informasi dari berbagai sumber.',
     indikatorSoal:
-      'Disajikan dimensi drum penampung minyak berbentuk tabung yang telah terisi sebagian (pecahan), peserta didik dapat menganalisis sisa volume minyak yang dibutuhkan hingga penuh dalam satuan liter.',
-    levelKognitif: 'L3',
+      'Disajikan gambar bagan siklus air dan teks eksplanasi terkait, peserta didik dapat menyimpulkan proses terjadinya hujan secara berkesinambungan.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   12: {
-    elemen: 'Geometri',
-    tujuanPembelajaran:
-      'Peserta didik dapat menghitung luas permukaan bangun ruang kubus dalam konteks pemecahan masalah sehari-hari.',
+    elemen: 'Kosakata dan Kebahasaan',
+    tujuanPembelajaran: 'Menentukan makna kosakata berdasarkan konteks.',
     indikatorSoal:
-      'Disajikan ukuran rusuk sebuah kotak kado berbentuk kubus, peserta didik dapat menentukan luas minimal kertas kado yang dibutuhkan untuk menutup seluruh permukaannya.',
+      'Disajikan sebuah kalimat berkonteks kerajinan daur ulang siswa, peserta didik dapat menentukan makna kata "inovatif" sesuai konteks kalimat.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
   13: {
-    elemen: 'Analisis Data dan Peluang',
-    tujuanPembelajaran:
-      'Peserta didik dapat menentukan nilai rata-rata (mean) dari sekumpulan data tunggal.',
+    elemen: 'Kosakata dan Kebahasaan',
+    tujuanPembelajaran: 'Menggunakan kaidah kebahasaan Bahasa Indonesia dengan tepat.',
     indikatorSoal:
-      'Disajikan sekumpulan data perolehan nilai ulangan harian siswa, peserta didik dapat menghitung nilai rata-rata (mean) dari data tersebut.',
-    levelKognitif: 'L1',
+      'Disajikan empat kalimat dengan variasi penulisan kata, peserta didik dapat memilih kalimat yang seluruh kosakatanya menggunakan kata baku sesuai KBBI.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   14: {
-    elemen: 'Analisis Data dan Peluang',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis data tunggal untuk menentukan nilai median (nilai tengah) dan modus.',
+    elemen: 'Kosakata dan Kebahasaan',
+    tujuanPembelajaran: 'Menggunakan kaidah kebahasaan Bahasa Indonesia dengan tepat.',
     indikatorSoal:
-      'Disajikan data berat badan sejumlah siswa peserta cerdas cermat yang belum berurutan, peserta didik dapat menentukan nilai median dan modus secara tepat.',
+      'Disajikan empat pilihan kalimat, peserta didik dapat menentukan kalimat efektif dengan penggunaan tanda baca yang tepat sesuai EYD V.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   15: {
-    elemen: 'Aljabar',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah aritmatika sosial yang berkaitan dengan persentase diskon (potongan harga).',
+    elemen: 'Literasi Membaca',
+    tujuanPembelajaran: 'Menafsirkan informasi tersurat dan tersirat.',
     indikatorSoal:
-      'Disajikan harga barang sebelum diskon dan persentase potongan harga belanja pendidikan, peserta didik dapat menghitung jumlah uang yang harus dibayar oleh pembeli.',
-    levelKognitif: 'L1',
+      'Disajikan teks informasi mengenai kebiasaan membaca lewat gawai vs buku cetak, peserta didik dapat membuat inferensi yang logis berdasarkan isi bacaan.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   16: {
-    elemen: 'Analisis Data dan Peluang',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyajikan dan menafsirkan data dalam bentuk diagram lingkaran.',
+    elemen: 'Literasi Membaca',
+    tujuanPembelajaran: 'Menyimpulkan, membandingkan, dan mengevaluasi informasi dari berbagai sumber.',
     indikatorSoal:
-      'Disajikan diagram lingkaran persentase pilihan kegiatan ekstrakurikuler beserta jumlah total siswa, peserta didik dapat menghitung banyak siswa yang memilih ekstrakurikuler tertentu.',
-    levelKognitif: 'L2',
+      'Disajikan dua kutipan teks kegiatan lingkungan sekolah dan desa, peserta didik dapat membandingkan dan menentukan persamaan tema utama kedua teks.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   17: {
-    elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat menentukan akar pangkat tiga dari bilangan kubik yang berkaitan dengan volume kubus.',
+    elemen: 'Literasi Membaca',
+    tujuanPembelajaran: 'Menyimpulkan, membandingkan, dan mengevaluasi informasi dari berbagai sumber.',
     indikatorSoal:
-      'Disajikan volume bak penampungan air berbentuk kubus, peserta didik dapat menentukan panjang rusuk bagian dalam bak tersebut.',
+      'Disajikan informasi tentang program pengurangan sampah plastik di koperasi sekolah, peserta didik dapat memilih tanggapan yang logis dan mendukung.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   18: {
-    elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat mengonversi satuan kecepatan dari km/menit ke meter per detik (m/s).',
+    elemen: 'Literasi Visual',
+    tujuanPembelajaran: 'Menginterpretasikan informasi dalam bentuk visual.',
     indikatorSoal:
-      'Disajikan jarak tempuh dan waktu seorang pelari maraton cilik, peserta didik dapat menghitung dan mengonversi kecepatan rata-rata ke satuan meter/detik.',
+      'Disajikan tabel data jumlah peminjaman buku perpustakaan selama empat bulan, peserta didik dapat menyimpulkan tren data tabel secara akurat.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   19: {
-    elemen: 'Geometri',
-    tujuanPembelajaran:
-      'Peserta didik dapat mengidentifikasi dan membedakan sifat-sifat bangun datar layang-layang melalui pilihan berganda kompleks.',
+    elemen: 'Teks Deskripsi',
+    tujuanPembelajaran: 'Menentukan gagasan pokok dan gagasan pendukung.',
     indikatorSoal:
-      'Disajikan tiga deskripsi sifat geometris bangun datar layang-layang, peserta didik dapat memilih semua pernyataan yang benar (lebih dari satu jawaban benar).',
+      'Disajikan paragraf deskripsi Desa Wisata Penglipuran, peserta didik dapat memilih lebih dari satu pernyataan yang benar sesuai isi teks (PGK).',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   20: {
-    elemen: 'Geometri',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis luas, keliling, dan estimasi nilai ekonomis lahan kebun berbentuk bangun datar.',
+    elemen: 'Literasi Visual',
+    tujuanPembelajaran: 'Menginterpretasikan informasi dalam bentuk visual.',
     indikatorSoal:
-      'Disajikan ukuran kebun berbentuk persegi panjang dan harga jual per meter persegi, peserta didik dapat mengevaluasi dan memilih semua pernyataan yang bernilai benar.',
-    levelKognitif: 'L3',
+      'Disajikan gambar poster kampanye "AYO HEMAT AIR!", peserta didik dapat memilih lebih dari satu pesan atau ajakan yang sesuai dengan isi poster (PGK).',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   21: {
-    elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat menerapkan operasi hitung campuran bilangan desimal dan satuan berat dalam belanja sehari-hari.',
+    elemen: 'Kosakata dan Kebahasaan',
+    tujuanPembelajaran: 'Menggunakan kaidah kebahasaan Bahasa Indonesia dengan tepat.',
     indikatorSoal:
-      'Disajikan data belanja kebutuhan pokok beras dan gula pasir, peserta didik dapat memverifikasi kebenaran hitungan berat tiap jenis barang dan total berat belanjaan.',
-    levelKognitif: 'L2',
-    bobotSkor: 1,
-  },
-  22: {
-    elemen: 'Aljabar',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis konsep aritmatika sosial mengenai bruto, neto, tara, modal, harga jual, dan keuntungan.',
-    indikatorSoal:
-      'Disajikan narasi pembelian buah dalam keranjang berkategori bruto dan tara, peserta didik dapat menentukan nilai kebenaran (Benar/Salah) pada 3 pernyataan terkait neto, modal, dan laba.',
+      'Disajikan tiga kalimat bertema kegiatan sekolah, peserta didik dapat mengidentifikasi lebih dari satu kalimat yang efektif dan sesuai EYD V (PGK).',
     levelKognitif: 'L3',
     bobotSkor: 1,
   },
-  23: {
-    elemen: 'Analisis Data dan Peluang',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis tabel distribusi frekuensi data tunggal dan menghubungkannya dengan kriteria ketercapaian (KKTP).',
+  22: {
+    elemen: 'Teks Narasi dan Cerita',
+    tujuanPembelajaran: 'Menganalisis unsur dan pesan dalam teks narasi.',
     indikatorSoal:
-      'Disajikan data frekuensi nilai ulangan dan batas KKTP sekolah, peserta didik dapat menentukan nilai kebenaran (Benar/Salah) pada 3 pernyataan terkait modus, jumlah siswa tuntas, dan persentase remedial.',
+      'Disajikan kutipan cerita tentang persiapan pameran karya siswa, peserta didik dapat menentukan kebenaran (Benar/Salah) 3 pernyataan terkait konflik, watak tokoh, dan amanat.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
-  24: {
-    elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis volume balok dan kapasitas penampungan air dalam satuan liter.',
+  23: {
+    elemen: 'Teks Prosedur',
+    tujuanPembelajaran: 'Memahami struktur dan urutan teks prosedur.',
     indikatorSoal:
-      'Disajikan dimensi bak penampungan air balok dan kondisi keterisian 3/4 kapasitas, peserta didik dapat menentukan kebenaran (Benar/Salah) untuk volume penuh, volume isi, dan volume air yang perlu ditambahkan.',
+      'Disajikan teks prosedur mematikan komputer laboratorium dengan aman, peserta didik dapat menentukan kebenaran (Benar/Salah) 3 pernyataan terkait tujuan dan langkah-langkahnya.',
+    levelKognitif: 'L1',
+    bobotSkor: 1,
+  },
+  24: {
+    elemen: 'Literasi Visual',
+    tujuanPembelajaran: 'Menginterpretasikan informasi dalam bentuk visual.',
+    indikatorSoal:
+      'Disajikan gambar ilustrasi kegiatan kerja bakti siswa dan narasi singkat, peserta didik dapat mengevaluasi kebenaran (Benar/Salah) 3 pernyataan sesuai gambar dan teks.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   25: {
-    elemen: 'Geometri',
-    tujuanPembelajaran:
-      'Peserta didik dapat menerapkan rumus keliling dan luas lingkaran pada objek kontekstual meja hias bundar.',
+    elemen: 'Teks Eksplanasi dan Informasi',
+    tujuanPembelajaran: 'Membedakan fakta dan opini.',
     indikatorSoal:
-      'Disajikan diameter meja bundar, peserta didik dapat mengevaluasi kebenaran (Benar/Salah) untuk panjang jari-jari, panjang renda hias keliling, dan luas permukaan kaca penutup.',
+      'Disajikan teks informasi mengenai Pembangkit Listrik Tenaga Surya (PLTS), peserta didik dapat menentukan kebenaran (Benar/Salah) 3 pernyataan tentang fakta, opini, dan isi bacaan.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   26: {
-    elemen: 'Aljabar',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis skala denah untuk menentukan ukuran panjang, lebar, dan luas sebenarnya.',
+    elemen: 'Teks Eksplanasi dan Informasi',
+    tujuanPembelajaran: 'Mengidentifikasi informasi penting dalam berbagai jenis teks.',
     indikatorSoal:
-      'Disajikan denah lapangan upacara sekolah dengan skala 1 : 400, peserta didik dapat menilai kebenaran (Benar/Salah) dari pernyataan panjang sebenarnya, lebar sebenarnya, dan luas sebenarnya.',
-    levelKognitif: 'L2',
+      'Disajikan teks eksplanasi penyebab kemacetan di depan sekolah dan solusinya, peserta didik dapat menentukan kebenaran (Benar/Salah) 3 pernyataan hubungan sebab-akibat.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   27: {
-    elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis permasalahan jarak, waktu tempuh total, waktu istirahat, dan kecepatan gerak murni bus pariwisata.',
+    elemen: 'Kosakata dan Kebahasaan',
+    tujuanPembelajaran: 'Menentukan makna kosakata berdasarkan konteks.',
     indikatorSoal:
-      'Disajikan jadwal keberangkatan bus karya wisata, waktu tiba, jarak tempuh, dan durasi istirahat, peserta didik dapat memverifikasi nilai kebenaran (Benar/Salah) pada total waktu, waktu gerak murni, dan kecepatan rata-rata saat melaju.',
-    levelKognitif: 'L3',
-    bobotSkor: 1,
-  },
-  28: {
-    elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan operasi persentase dan pecahan terhadap kuantitas barang persediaan awal.',
-    indikatorSoal:
-      'Disajikan persediaan awal buku tulis di koperasi dan data penjualan hari Senin (persen) dan Selasa (pecahan), peserta didik dapat menentukan kebenaran (Benar/Salah) dari 3 pernyataan penjualan dan sisa stok.',
-    levelKognitif: 'L1',
-    bobotSkor: 1,
-  },
-  29: {
-    elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat mengaplikasikan FPB dalam menentukan paket hadiah dan rincian isi barang per regu penerima.',
-    indikatorSoal:
-      'Disajikan jumlah tiga perlengkapan hadiah lomba kebersihan kelas, peserta didik dapat mengevaluasi kebenaran (Benar/Salah) nilai FPB, banyak regu terbanyak penerima, dan komposisi isi barang per regu.',
+      'Disajikan paragraf tentang penataan ruang belajar dan pojok baca, peserta didik dapat menilai kebenaran (Benar/Salah) 3 pernyataan terkait sinonim, antonim, dan makna kata.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
-  30: {
-    elemen: 'Geometri',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis koordinat Kartesius 4 titik untuk mengidentifikasi bentuk bangun datar, keliling, dan luas.',
+  28: {
+    elemen: 'Kosakata dan Kebahasaan',
+    tujuanPembelajaran: 'Menggunakan kaidah kebahasaan Bahasa Indonesia dengan tepat.',
     indikatorSoal:
-      'Disajikan 4 titik koordinat bidang Kartesius yang saling dihubungkan, peserta didik dapat menganalisis dan menentukan kebenaran (Benar/Salah) dari jenis bangun datar yang terbentuk, keliling, dan luasnya.',
+      'Disajikan tiga kalimat bertema kegiatan belajar siswa, peserta didik dapat mengevaluasi kebenaran (Benar/Salah) penggunaan huruf kapital, tanda baca petik langsung, dan keefektifan kalimat.',
     levelKognitif: 'L3',
+    bobotSkor: 1,
+  },
+  29: {
+    elemen: 'Literasi Membaca',
+    tujuanPembelajaran: 'Menyimpulkan, membandingkan, dan mengevaluasi informasi dari berbagai sumber.',
+    indikatorSoal:
+      'Disajikan dua teks ulasan layanan bacaan (perpustakaan keliling vs aplikasi baca digital), peserta didik dapat menentukan kebenaran (Benar/Salah) 3 pernyataan perbandingan dan evaluasi.',
+    levelKognitif: 'L3',
+    bobotSkor: 1,
+  },
+  30: {
+    elemen: 'Literasi Visual',
+    tujuanPembelajaran: 'Menginterpretasikan informasi dalam bentuk visual.',
+    indikatorSoal:
+      'Disajikan data infografis capaian program Gerakan Literasi Sekolah, peserta didik dapat menentukan kebenaran (Benar/Salah) 3 pernyataan interpretasi data visual.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
 };
@@ -362,13 +332,13 @@ export function getQuestionBlueprint(q: Question, index: number): QuestionBluepr
     q.tujuanPembelajaran ||
     (def
       ? def.tujuanPembelajaran
-      : `Peserta didik mampu menerapkan konsep materi ${q.topic} dalam menyelesaikan permasalahan matematika.`);
+      : `Peserta didik mampu memahami dan menerapkan materi ${q.topic} dalam pelajaran Bahasa Indonesia.`);
 
   const indikatorSoal =
     q.indikatorSoal ||
     (def
       ? def.indikatorSoal
-      : `Disajikan stimulus masalah tentang ${q.topic}, peserta didik dapat menentukan jawaban yang tepat.`);
+      : `Disajikan stimulus teks atau visual tentang ${q.topic}, peserta didik dapat menentukan jawaban yang tepat.`);
 
   const bobotSkor = q.bobot || (def ? def.bobotSkor : 1);
 
@@ -390,22 +360,32 @@ export function getQuestionBlueprint(q: Question, index: number): QuestionBluepr
 
 function inferElemenFromTopic(topic: string): string {
   const t = topic.toLowerCase();
-  if (t.includes('bilangan') || t.includes('pecahan') || t.includes('fpb') || t.includes('kpk') || t.includes('pangkat')) {
-    return 'Bilangan';
+  if (t.includes('deskripsi')) {
+    return 'Teks Deskripsi';
   }
-  if (t.includes('lingkaran') || t.includes('bangun datar') || t.includes('kubus') || t.includes('geometri') || t.includes('layang')) {
-    return 'Geometri';
+  if (t.includes('narasi') || t.includes('cerita') || t.includes('tokoh') || t.includes('amanat')) {
+    return 'Teks Narasi dan Cerita';
   }
-  if (t.includes('debit') || t.includes('volume') || t.includes('kecepatan') || t.includes('jarak')) {
-    return 'Pengukuran';
+  if (t.includes('prosedur') || t.includes('langkah')) {
+    return 'Teks Prosedur';
   }
-  if (t.includes('skala') || t.includes('perbandingan') || t.includes('diskon') || t.includes('bruto') || t.includes('aritmatika')) {
-    return 'Aljabar';
+  if (t.includes('eksplanasi') || t.includes('fakta') || t.includes('opini')) {
+    return 'Teks Eksplanasi dan Informasi';
   }
-  if (t.includes('statistika') || t.includes('diagram') || t.includes('mean') || t.includes('modus') || t.includes('median')) {
-    return 'Analisis Data dan Peluang';
+  if (
+    t.includes('kosakata') ||
+    t.includes('kebahasaan') ||
+    t.includes('baku') ||
+    t.includes('sinonim') ||
+    t.includes('tanda baca') ||
+    t.includes('kalimat efektif')
+  ) {
+    return 'Kosakata dan Kebahasaan';
   }
-  return 'Bilangan';
+  if (t.includes('visual') || t.includes('poster') || t.includes('tabel') || t.includes('infografis')) {
+    return 'Literasi Visual';
+  }
+  return 'Literasi Membaca';
 }
 
 function inferLevelFromDifficulty(diff: Difficulty): CognitiveLevel {

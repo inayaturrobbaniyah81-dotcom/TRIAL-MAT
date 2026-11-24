@@ -37,6 +37,8 @@ import {
   AlertTriangle,
   Lock,
   EyeOff,
+  ZoomIn,
+  X,
 } from 'lucide-react';
 
 interface Stage2ExamProps {
@@ -101,6 +103,11 @@ export const Stage2Exam: React.FC<Stage2ExamProps> = ({
   // Status pengiriman
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [zoomedImage, setZoomedImage] = useState<{
+    url: string;
+    alt: string;
+    caption?: string;
+  } | null>(null);
 
   // Anti-Cheat & Fullscreen States
   const [isFullscreenBlocked, setIsFullscreenBlocked] = useState(false);
@@ -715,6 +722,46 @@ export const Stage2Exam: React.FC<Stage2ExamProps> = ({
                 {currentQ.type === 'pgk_kategori' && 'Tentukan pilihan Benar atau Salah untuk setiap pernyataan di bawah ini.'}
               </div>
 
+              {/* Gambar Stimulus Soal (Jika Tersedia) */}
+              {currentQ.imageUrl && (
+                <figure className="mb-5 rounded-xl overflow-hidden border border-slate-200 bg-slate-50 shadow-2xs">
+                  <div className="relative group bg-white">
+                    <img
+                      src={currentQ.imageUrl}
+                      alt={currentQ.imageAlt || `Ilustrasi Soal No. ${currentIndex + 1}`}
+                      referrerPolicy="no-referrer"
+                      onClick={() =>
+                        setZoomedImage({
+                          url: currentQ.imageUrl!,
+                          alt: currentQ.imageAlt || `Ilustrasi Soal No. ${currentIndex + 1}`,
+                          caption: currentQ.imageCaption,
+                        })
+                      }
+                      className="w-full max-h-72 sm:max-h-80 object-contain mx-auto cursor-zoom-in"
+                    />
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setZoomedImage({
+                          url: currentQ.imageUrl!,
+                          alt: currentQ.imageAlt || `Ilustrasi Soal No. ${currentIndex + 1}`,
+                          caption: currentQ.imageCaption,
+                        })
+                      }
+                      className="absolute bottom-2.5 right-2.5 inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 hover:bg-slate-900 text-white text-[11px] font-semibold backdrop-blur-xs transition-colors cursor-pointer"
+                    >
+                      <ZoomIn className="w-3.5 h-3.5" />
+                      <span>Perbesar Gambar</span>
+                    </button>
+                  </div>
+                  {currentQ.imageCaption && (
+                    <figcaption className="px-3.5 py-2 text-xs font-medium text-slate-600 bg-slate-100/90 border-t border-slate-200 text-center">
+                      {currentQ.imageCaption}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
+
               {/* Teks Soal */}
               <div className="text-sm sm:text-base text-slate-900 leading-relaxed font-medium whitespace-pre-line mb-6">
                 {currentQ.text}
@@ -1200,6 +1247,41 @@ export const Stage2Exam: React.FC<Stage2ExamProps> = ({
             <div className="flex items-center justify-center gap-2.5 text-xs font-bold text-slate-600 pt-2">
               <Loader2 className="w-5 h-5 animate-spin text-red-600" />
               <span>Menyimpan hasil ke Google Spreadsheet...</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 4. MODAL PERBESAR GAMBAR SOAL */}
+      {zoomedImage && (
+        <div
+          className="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-xs animate-in fade-in duration-150"
+          onClick={() => setZoomedImage(null)}
+        >
+          <div
+            className="relative bg-white rounded-2xl max-w-4xl w-full p-3 sm:p-4 shadow-2xl border border-slate-200 space-y-2.5"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-1">
+              <span className="text-xs font-bold text-slate-700">
+                {zoomedImage.caption || zoomedImage.alt}
+              </span>
+              <button
+                type="button"
+                onClick={() => setZoomedImage(null)}
+                className="p-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-100 cursor-pointer"
+                aria-label="Tutup gambar"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="bg-slate-50 rounded-xl overflow-hidden border border-slate-200 flex items-center justify-center">
+              <img
+                src={zoomedImage.url}
+                alt={zoomedImage.alt}
+                referrerPolicy="no-referrer"
+                className="max-h-[78vh] w-auto object-contain"
+              />
             </div>
           </div>
         </div>

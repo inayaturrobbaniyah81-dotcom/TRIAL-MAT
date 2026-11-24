@@ -153,7 +153,7 @@ export const MatriksKisiKisiTab: React.FC<MatriksKisiKisiTabProps> = ({ question
             </div>
           </div>
           <span className="text-[11px] text-slate-400 mt-3 pt-2 border-t border-slate-100 block">
-            Capaian Pembelajaran Matematika Fase C
+            Capaian Pembelajaran Bahasa Indonesia Fase C
           </span>
         </div>
 
@@ -197,7 +197,7 @@ export const MatriksKisiKisiTab: React.FC<MatriksKisiKisiTabProps> = ({ question
             </div>
           </div>
           <span className="text-[11px] text-slate-400 mt-3 pt-2 border-t border-slate-100 block">
-            Proporsi L1=27%, L2=53%, L3=20% (HOTS)
+            Proporsi L1, L2, dan L3 (HOTS) Seimbang
           </span>
         </div>
 

@@ -371,7 +371,7 @@ export function getStudentDiagnostic(
       );
     }
     recommendations.push(
-      'Program Pengayaan: Diberikan penugasan pemecahan masalah matematika tingkat tinggi (HOTS Level L3) dan dapat dilibatkan sebagai tutor sebaya di kelas.'
+      'Program Pengayaan: Diberikan penugasan literasi membaca kritis, analisis teks multimodal, dan penulisan kreatif tingkat tinggi (HOTS Level L3) serta dapat dilibatkan sebagai tutor sebaya di kelas.'
     );
   } else {
     recommendations.push(

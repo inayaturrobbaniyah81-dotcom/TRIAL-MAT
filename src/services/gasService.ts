@@ -637,9 +637,9 @@ function doPost(e) {
     var ss = SpreadsheetApp.getActiveSpreadsheet();
     
     // 1. Tentukan Nama Tab Sheet Berdasarkan Mata Pelajaran
-    var rawSubject = contents.mataPelajaran || contents.subject || "MATEMATIKA";
+    var rawSubject = contents.mataPelajaran || contents.subject || "BAHASA INDONESIA";
     var sheetName = String(rawSubject).trim().toUpperCase().replace(/[^A-Z0-9_]/g, "_");
-    if (!sheetName) sheetName = "MATEMATIKA";
+    if (!sheetName) sheetName = "BAHASA_INDONESIA";
     
     var sheet = ss.getSheetByName(sheetName);
     
@@ -723,7 +723,7 @@ function doPost(e) {
     // 5. Simpan Hasil Tes Siswa (Append Row ke Tab Mapel)
     var timestamp = contents.timestamp || Utilities.formatDate(new Date(), "GMT+8", "dd/MM/yyyy HH:mm:ss");
     var nama = contents.studentName || contents.nama || "";
-    var kelas = contents.className || contents.kelas || "VI";
+    var kelas = contents.className || contents.kelas || "VI (ENAM)";
     var noAbsen = contents.absenNumber || contents.noAbsen || "";
     var tglLahir = contents.birthDate || contents.tglLahir || "";
     var benar = contents.correctCount !== undefined ? contents.correctCount : (contents.benar || 0);
@@ -731,7 +731,7 @@ function doPost(e) {
     var nilai = contents.finalScore !== undefined ? contents.finalScore : (contents.nilai || 0);
     var status = contents.status || (nilai >= 70 ? "Lulus" : "Belum Lulus");
     var mapel = contents.mataPelajaran || rawSubject;
-    var sekolah = contents.sekolah || "SEKOLAH DASAR";
+    var sekolah = contents.sekolah || "SD N 3 DANGINTUKADAYA";
     
     sheet.appendRow([
       timestamp,
